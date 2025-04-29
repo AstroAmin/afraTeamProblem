@@ -1,0 +1,15 @@
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/ament_index/resource_index/package_run_dependencies/px4_commander
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/ament_index/resource_index/parent_prefix_path/px4_commander
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/environment/ament_prefix_path.sh
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/environment/ament_prefix_path.dsv
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/environment/path.sh
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/environment/path.dsv
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/local_setup.bash
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/local_setup.sh
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/local_setup.zsh
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/local_setup.dsv
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/package.dsv
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/ament_index/resource_index/packages/px4_commander
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/cmake/px4_commanderConfig.cmake
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/cmake/px4_commanderConfig-version.cmake
+/home/amin/ros2_ardu_afra_team_ws/install/px4_commander/share/px4_commander/package.xml

@@ -4,3 +4,6 @@ source;share/ardu_afra_team/hook/pythonpath.sh
 source;share/ardu_afra_team/hook/ament_prefix_path.ps1
 source;share/ardu_afra_team/hook/ament_prefix_path.dsv
 source;share/ardu_afra_team/hook/ament_prefix_path.sh
+source;../../build/ardu_afra_team/share/ardu_afra_team/hook/pythonpath_develop.ps1
+source;../../build/ardu_afra_team/share/ardu_afra_team/hook/pythonpath_develop.dsv
+source;../../build/ardu_afra_team/share/ardu_afra_team/hook/pythonpath_develop.sh

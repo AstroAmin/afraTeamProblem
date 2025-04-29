@@ -11,17 +11,17 @@ class MenuNode(Node):
     def run_menu(self):
         while rclpy.ok():
             print("\n========== Drone Control Menu ==========")
-            print("1. Start Shape Control Node")  # فقط نود shape_control_node.py
-            print("2. Start Control Node")       # اضافه کردن گزینه نود کنترل
+            print("1. Start Shape Control Node")
+            print("2. Start Manual Control Node")
             print("3. Exit")
             print("========================================")
 
-            choice = input("👉 Please select an option (1-3): ")  # تغییر شماره‌گذاری
+            choice = input("👉 Please select an option (1-3): ")
 
             if choice == '1':
-                self.run_node('shape_control_node')  # فراخوانی نود shape_control_node
+                self.run_node('shape_control_node')
             elif choice == '2':
-                self.run_node('control')            # فراخوانی نود control (نام صحیح نود)
+                self.run_node('control')
             elif choice == '3':
                 print("👋 Exiting menu.")
                 rclpy.shutdown()
@@ -31,13 +31,13 @@ class MenuNode(Node):
 
     def run_node(self, node_name):
         self.get_logger().info(f"🚀 Running node: {node_name}")
-        os.system(f"gnome-terminal -- bash -c 'source ~/ros2_px4_offboard_example_ws/install/setup.bash && ros2 run px4_offboard {node_name}; exec bash'")
+        os.system(f"gnome-terminal -- bash -c 'source ~/ros2_ardu_afra_team_ws/install/setup.bash && ros2 run ardu_afra_team {node_name}; exec bash'")
 
 def main(args=None):
     rclpy.init(args=args)
-    menu_node = MenuNode()
-    rclpy.spin(menu_node)
-    menu_node.destroy_node()
+    node = MenuNode()
+    rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

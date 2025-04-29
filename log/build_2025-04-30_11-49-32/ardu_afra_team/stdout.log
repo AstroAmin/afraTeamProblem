@@ -1,0 +1,23 @@
+running develop
+running egg_info
+writing ardu_afra_team.egg-info/PKG-INFO
+writing dependency_links to ardu_afra_team.egg-info/dependency_links.txt
+writing entry points to ardu_afra_team.egg-info/entry_points.txt
+writing requirements to ardu_afra_team.egg-info/requires.txt
+writing top-level names to ardu_afra_team.egg-info/top_level.txt
+reading manifest file 'ardu_afra_team.egg-info/SOURCES.txt'
+writing manifest file 'ardu_afra_team.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu-afra-team.egg-link (link to .)
+Installing control script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+Installing menu_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+Installing movment_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+Installing shape_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+
+Installed /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team
+running symlink_data
+symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/resource/ardu_afra_team -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ament_index/resource_index/packages
+symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/package.xml -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team
+symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/launch/spawn_drones.launch.py -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/launch
+symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/models/iris_with_ardupilot/model.sdf -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot
+symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/models/iris_with_ardupilot/model.config -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot

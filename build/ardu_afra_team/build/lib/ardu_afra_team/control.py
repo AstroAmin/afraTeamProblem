@@ -13,7 +13,6 @@ else:
     import termios
     import tty
 
-
 msg = """
 🚀 This node takes keypresses from the keyboard and publishes them as Twist messages. 🌍
 Using the arrow keys and WASD you have Mode 2 RC controls. 
@@ -41,24 +40,11 @@ moveBindings = {
     '\x1b[D' : (1, 0, 0, 0),  #Left Arrow
 }
 
-
-speedBindings = {
-    # 'q': (1.1, 1.1),
-    # 'z': (.9, .9),
-    # 'w': (1.1, 1),
-    # 'x': (.9, 1),
-    # 'e': (1, 1.1),
-    # 'c': (1, .9),
-}
-
-
 def getKey(settings):
     if sys.platform == 'win32':
-        # getwch() returns a string on Windows
         key = msvcrt.getwch()
     else:
         tty.setraw(sys.stdin.fileno())
-        # sys.stdin.read() returns a string on Linux
         key = sys.stdin.read(1)
         if key == '\x1b':  # if the first character is \x1b, we might be dealing with an arrow key
             additional_chars = sys.stdin.read(2)  # read the next two characters
@@ -66,23 +52,18 @@ def getKey(settings):
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     return key
 
-
-
 def saveTerminalSettings():
     if sys.platform == 'win32':
         return None
     return termios.tcgetattr(sys.stdin)
-
 
 def restoreTerminalSettings(old_settings):
     if sys.platform == 'win32':
         return
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
-
 def vels(speed, turn):
     return '🚁 currently:\tspeed %s\tturn %s ' % (speed, turn)
-
 
 def main():
     settings = saveTerminalSettings()
@@ -98,12 +79,10 @@ def main():
         depth=10
     )
 
-
     pub = node.create_publisher(geometry_msgs.msg.Twist, '/offboard_velocity_cmd', qos_profile)
 
     arm_toggle = False
     arm_pub = node.create_publisher(std_msgs.msg.Bool, '/arm_message', qos_profile)
-
 
     speed = 0.5
     turn = .2
@@ -111,7 +90,6 @@ def main():
     y = 0.0
     z = 0.0
     th = 0.0
-    status = 0.0
     x_val = 0.0
     y_val = 0.0
     z_val = 0.0
@@ -119,7 +97,6 @@ def main():
 
     try:
         print(msg)
-        # print(vels(speed, turn))
         while True:
             key = getKey(settings)
             if key in moveBindings.keys():
@@ -133,7 +110,7 @@ def main():
                 y = 0.0
                 z = 0.0
                 th = 0.0
-                if (key == '\x03'):
+                if key == '\x03':  # Ctrl-C for exit
                     break
 
             if key == ' ':  # ASCII value for space
@@ -145,11 +122,12 @@ def main():
                 print(f"🚀 Arm status: {arm_status}")
 
             twist = geometry_msgs.msg.Twist()
-            
-            x_val = (x * speed) + x_val
-            y_val = (y * speed) + y_val
-            z_val = (z * speed) + z_val
-            yaw_val = (th * turn) + yaw_val
+
+            # Update velocities
+            x_val += x * speed
+            y_val += y * speed
+            z_val += z * speed
+            yaw_val += th * turn
             twist.linear.x = x_val
             twist.linear.y = y_val
             twist.linear.z = z_val
@@ -158,7 +136,6 @@ def main():
             twist.angular.z = yaw_val
             pub.publish(twist)
 
-            # Printing the positions in a table format
             print("\n🛰️ Updated Drone Positions: 🌍")
             print("+-------+---------+---------+---------+")
             print(f"| ID    |   X(m)  |   Y(m)  |   Z(m)  |")

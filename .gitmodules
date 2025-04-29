@@ -1,0 +1,3 @@
+[submodule "src/px4_ros_com"]
+	path = src/px4_ros_com
+	url = https://github.com/AstroAmin/afraTeamProblem.git

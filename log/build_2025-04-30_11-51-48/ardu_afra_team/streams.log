@@ -1,0 +1,20 @@
+[1.703s] Invoking command in '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team': PYTHONPATH=/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build --no-deps symlink_data
+[2.347s] running develop
+[2.813s] running egg_info
+[2.847s] writing ardu_afra_team.egg-info/PKG-INFO
+[2.848s] writing dependency_links to ardu_afra_team.egg-info/dependency_links.txt
+[2.848s] writing entry points to ardu_afra_team.egg-info/entry_points.txt
+[2.849s] writing requirements to ardu_afra_team.egg-info/requires.txt
+[2.849s] writing top-level names to ardu_afra_team.egg-info/top_level.txt
+[2.915s] reading manifest file 'ardu_afra_team.egg-info/SOURCES.txt'
+[2.925s] writing manifest file 'ardu_afra_team.egg-info/SOURCES.txt'
+[2.965s] running build_ext
+[2.965s] Creating /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu-afra-team.egg-link (link to .)
+[2.966s] Installing control script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.967s] Installing menu_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.967s] Installing movment_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.967s] Installing shape_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.968s] 
+[2.968s] Installed /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team
+[2.968s] running symlink_data
+[3.029s] Invoked command in '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team' returned '0': PYTHONPATH=/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build --no-deps symlink_data

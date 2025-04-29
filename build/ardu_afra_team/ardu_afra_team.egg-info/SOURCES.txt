@@ -13,8 +13,14 @@ ardu_afra_team/control.py
 ardu_afra_team/menu_node.py
 ardu_afra_team/movment_control_node.py
 ardu_afra_team/shape_control_node.py
+ardu_afra_team.egg-info/PKG-INFO
+ardu_afra_team.egg-info/SOURCES.txt
+ardu_afra_team.egg-info/dependency_links.txt
+ardu_afra_team.egg-info/entry_points.txt
+ardu_afra_team.egg-info/requires.txt
+ardu_afra_team.egg-info/top_level.txt
+ardu_afra_team.egg-info/zip-safe
 launch/spawn_drones.launch.py
+models/iris_with_ardupilot/model.config
+models/iris_with_ardupilot/model.sdf
 resource/ardu_afra_team
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

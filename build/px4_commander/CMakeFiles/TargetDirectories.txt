@@ -1,0 +1,9 @@
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/uninstall.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/px4_commander_uninstall.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/test.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/edit_cache.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/rebuild_cache.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/list_install_components.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/install.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/install/local.dir
+/home/amin/ros2_ardu_afra_team_ws/build/px4_commander/CMakeFiles/install/strip.dir

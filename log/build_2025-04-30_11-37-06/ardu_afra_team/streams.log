@@ -1,0 +1,36 @@
+[1.392s] Invoking command in '/home/amin/ros2_ardu_afra_team_ws/src/ardu_afra_team': PYTHONPATH=/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ardu_afra_team build --build-base /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build install --record /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/install.log --single-version-externally-managed install_data
+[1.869s] running egg_info
+[1.899s] writing ../../build/ardu_afra_team/ardu_afra_team.egg-info/PKG-INFO
+[1.900s] writing dependency_links to ../../build/ardu_afra_team/ardu_afra_team.egg-info/dependency_links.txt
+[1.900s] writing entry points to ../../build/ardu_afra_team/ardu_afra_team.egg-info/entry_points.txt
+[1.901s] writing requirements to ../../build/ardu_afra_team/ardu_afra_team.egg-info/requires.txt
+[1.901s] writing top-level names to ../../build/ardu_afra_team/ardu_afra_team.egg-info/top_level.txt
+[1.967s] reading manifest file '../../build/ardu_afra_team/ardu_afra_team.egg-info/SOURCES.txt'
+[1.969s] writing manifest file '../../build/ardu_afra_team/ardu_afra_team.egg-info/SOURCES.txt'
+[1.970s] running build
+[1.970s] running build_py
+[1.970s] copying ardu_afra_team/shape_control_node.py -> /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team
+[1.970s] copying ardu_afra_team/__init__.py -> /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team
+[1.970s] copying ardu_afra_team/menu_node.py -> /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team
+[1.971s] copying ardu_afra_team/movment_control_node.py -> /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team
+[1.971s] copying ardu_afra_team/control.py -> /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team
+[1.971s] running install
+[1.977s] running install_lib
+[2.008s] copying /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build/lib/ardu_afra_team/movment_control_node.py -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu_afra_team
+[2.009s] byte-compiling /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu_afra_team/movment_control_node.py to movment_control_node.cpython-310.pyc
+[2.011s] running install_data
+[2.011s] copying resource/ardu_afra_team -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ament_index/resource_index/packages
+[2.011s] copying package.xml -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team
+[2.012s] copying launch/spawn_drones.launch.py -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/launch
+[2.012s] copying models/iris_with_ardupilot/model.sdf -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot
+[2.012s] copying models/iris_with_ardupilot/model.config -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot
+[2.013s] running install_egg_info
+[2.046s] removing '/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu_afra_team-0.0.0-py3.10.egg-info' (and everything under it)
+[2.047s] Copying ../../build/ardu_afra_team/ardu_afra_team.egg-info to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu_afra_team-0.0.0-py3.10.egg-info
+[2.048s] running install_scripts
+[2.305s] Installing control script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.305s] Installing menu_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.305s] Installing movment_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.305s] Installing shape_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team
+[2.306s] writing list of installed files to '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/install.log'
+[2.350s] Invoked command in '/home/amin/ros2_ardu_afra_team_ws/src/ardu_afra_team' returned '0': PYTHONPATH=/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ardu_afra_team build --build-base /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build install --record /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/install.log --single-version-externally-managed install_data

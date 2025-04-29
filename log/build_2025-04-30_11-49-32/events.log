@@ -1,0 +1,431 @@
+[0.000000] (-) TimerEvent: {}
+[0.000870] (ardu_afra_team) JobQueued: {'identifier': 'ardu_afra_team', 'dependencies': OrderedDict()}
+[0.000985] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict()}
+[0.001038] (ardu_afra_team) JobStarted: {'identifier': 'ardu_afra_team'}
+[0.013540] (px4_ros_com) JobStarted: {'identifier': 'px4_ros_com'}
+[0.099498] (-) TimerEvent: {}
+[0.199885] (-) TimerEvent: {}
+[0.300215] (-) TimerEvent: {}
+[0.400601] (-) TimerEvent: {}
+[0.430031] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'cmake'}
+[0.431361] (px4_ros_com) Command: {'cmd': ['/usr/bin/cmake', '/home/amin/ros2_ardu_afra_team_ws/src/px4_ros_com', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com'], 'cwd': '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'amin'), ('LC_TIME', 'az_IR'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amin/ros2_ws/install/px4_ros_com/lib:/home/amin/ros2_ws/install/px4_msgs/lib:/home/amin/ros2_ws/install/px4/lib:/home/amin/ros2_ws/install/mavros_extras/lib:/home/amin/ros2_ws/install/mavros/lib:/home/amin/ros2_ws/install/mavros_msgs/lib:/home/amin/ros2_ws/install/libmavconn/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amin'), ('OLDPWD', '/home/amin/ros2_ardu_afra_team_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'az_IR'), ('SYSTEMD_EXEC_PID', '5093'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/amin/ros2_ws/install:/home/amin/ros2_px4_offboard_example_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'amin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/amin/gazebo/models:/home/amin/ardupilot_gazebo/models:/home/amin/ros2_ws/src/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models:/home/amin/ros2_ws/src/models:/home/amin/ros2_ws/src/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/lib/ccache:/home/amin/apm/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/amin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Astro-Amin:@/tmp/.ICE-unix/1664,unix/Astro-Amin:/tmp/.ICE-unix/1664'), ('DONT_RUN', '1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'az_IR'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/39a85f78_552f_4974_8e00_3b3420d7dd37'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'az_IR'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.R4LS52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_ws/install/drone_formation:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'az_IR'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'az_IR'), ('LC_IDENTIFICATION', 'az_IR'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/amin/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/px4_commander_pkg:/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages:/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/drone_formation:/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'az_IR'), ('LC_PAPER', 'az_IR'), ('COLCON', '1'), ('apm', '/home/amin/apm'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/drone_formation:/opt/ros/humble')]), 'shell': False}
+[0.500730] (-) TimerEvent: {}
+[0.601091] (-) TimerEvent: {}
+[0.635426] (px4_ros_com) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.701201] (-) TimerEvent: {}
+[0.801562] (-) TimerEvent: {}
+[0.805989] (px4_ros_com) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.833002] (px4_ros_com) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.901688] (-) TimerEvent: {}
+[0.943701] (px4_ros_com) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.956534] (px4_ros_com) StdoutLine: {'line': b'-- Check for working C compiler: /usr/lib/ccache/cc - skipped\n'}
+[0.959202] (px4_ros_com) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.971503] (px4_ros_com) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.976902] (px4_ros_com) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.001818] (-) TimerEvent: {}
+[1.097491] (px4_ros_com) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.101915] (-) TimerEvent: {}
+[1.110166] (px4_ros_com) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped\n'}
+[1.110535] (px4_ros_com) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.111260] (px4_ros_com) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.139590] (px4_ros_com) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.202031] (-) TimerEvent: {}
+[1.302357] (-) TimerEvent: {}
+[1.402693] (-) TimerEvent: {}
+[1.503071] (-) TimerEvent: {}
+[1.556611] (ardu_afra_team) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'amin', 'LC_TIME': 'az_IR', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/amin/ros2_ws/install/px4_ros_com/lib:/home/amin/ros2_ws/install/px4_msgs/lib:/home/amin/ros2_ws/install/px4/lib:/home/amin/ros2_ws/install/mavros_extras/lib:/home/amin/ros2_ws/install/mavros/lib:/home/amin/ros2_ws/install/mavros_msgs/lib:/home/amin/ros2_ws/install/libmavconn/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/amin', 'OLDPWD': '/home/amin/ros2_ardu_afra_team_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'az_IR', 'SYSTEMD_EXEC_PID': '5093', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/amin/ros2_ws/install:/home/amin/ros2_px4_offboard_example_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'amin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'amin', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/home/amin/gazebo/models:/home/amin/ardupilot_gazebo/models:/home/amin/ros2_ws/src/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models:/home/amin/ros2_ws/src/models:/home/amin/ros2_ws/src/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/lib/ccache:/home/amin/apm/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/amin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/Astro-Amin:@/tmp/.ICE-unix/1664,unix/Astro-Amin:/tmp/.ICE-unix/1664', 'DONT_RUN': '1', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'az_IR', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/39a85f78_552f_4974_8e00_3b3420d7dd37', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'az_IR', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.R4LS52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.121', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_ws/install/drone_formation:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'az_IR', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'az_IR', 'LC_IDENTIFICATION': 'az_IR', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/home/amin/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'PYTHONPATH': '/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages:/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/px4_commander_pkg:/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages:/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/drone_formation:/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'az_IR', 'LC_PAPER': 'az_IR', 'COLCON': '1', 'apm': '/home/amin/apm', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg'}, 'shell': False}
+[1.603183] (-) TimerEvent: {}
+[1.703542] (-) TimerEvent: {}
+[1.803875] (-) TimerEvent: {}
+[1.850375] (px4_ros_com) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.903984] (-) TimerEvent: {}
+[1.973351] (px4_ros_com) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.004087] (-) TimerEvent: {}
+[2.045643] (px4_ros_com) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[2.104214] (-) TimerEvent: {}
+[2.131835] (px4_ros_com) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.146571] (px4_ros_com) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.168437] (px4_ros_com) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.203623] (px4_ros_com) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.204279] (-) TimerEvent: {}
+[2.243009] (px4_ros_com) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.244747] (ardu_afra_team) StdoutLine: {'line': b'running develop\n'}
+[2.280223] (px4_ros_com) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[2.301360] (px4_ros_com) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[2.304373] (-) TimerEvent: {}
+[2.305822] (px4_ros_com) StdoutLine: {'line': b'-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.369249] (px4_ros_com) StdoutLine: {'line': b'-- Found px4_msgs: 2.0.1 (/home/amin/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)\n'}
+[2.403462] (px4_ros_com) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.404465] (-) TimerEvent: {}
+[2.499247] (px4_ros_com) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.504585] (-) TimerEvent: {}
+[2.507232] (px4_ros_com) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.604700] (-) TimerEvent: {}
+[2.666689] (px4_ros_com) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.704816] (-) TimerEvent: {}
+[2.717483] (px4_ros_com) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.763084] (ardu_afra_team) StdoutLine: {'line': b'running egg_info\n'}
+[2.783832] (px4_ros_com) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.800567] (ardu_afra_team) StdoutLine: {'line': b'writing ardu_afra_team.egg-info/PKG-INFO\n'}
+[2.801448] (ardu_afra_team) StdoutLine: {'line': b'writing dependency_links to ardu_afra_team.egg-info/dependency_links.txt\n'}
+[2.801740] (ardu_afra_team) StdoutLine: {'line': b'writing entry points to ardu_afra_team.egg-info/entry_points.txt\n'}
+[2.802167] (ardu_afra_team) StdoutLine: {'line': b'writing requirements to ardu_afra_team.egg-info/requires.txt\n'}
+[2.802417] (ardu_afra_team) StdoutLine: {'line': b'writing top-level names to ardu_afra_team.egg-info/top_level.txt\n'}
+[2.804902] (-) TimerEvent: {}
+[2.819848] (px4_ros_com) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.877662] (ardu_afra_team) StdoutLine: {'line': b"reading manifest file 'ardu_afra_team.egg-info/SOURCES.txt'\n"}
+[2.879896] (ardu_afra_team) StdoutLine: {'line': b"writing manifest file 'ardu_afra_team.egg-info/SOURCES.txt'\n"}
+[2.905015] (-) TimerEvent: {}
+[2.918617] (ardu_afra_team) StdoutLine: {'line': b'running build_ext\n'}
+[2.918966] (ardu_afra_team) StdoutLine: {'line': b'Creating /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages/ardu-afra-team.egg-link (link to .)\n'}
+[2.920211] (ardu_afra_team) StdoutLine: {'line': b'Installing control script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team\n'}
+[2.920552] (ardu_afra_team) StdoutLine: {'line': b'Installing menu_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team\n'}
+[2.920855] (ardu_afra_team) StdoutLine: {'line': b'Installing movment_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team\n'}
+[2.921147] (ardu_afra_team) StdoutLine: {'line': b'Installing shape_control_node script to /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/ardu_afra_team\n'}
+[2.921582] (ardu_afra_team) StdoutLine: {'line': b'\n'}
+[2.921796] (ardu_afra_team) StdoutLine: {'line': b'Installed /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team\n'}
+[2.922038] (ardu_afra_team) StdoutLine: {'line': b'running symlink_data\n'}
+[2.922436] (ardu_afra_team) StdoutLine: {'line': b'symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/resource/ardu_afra_team -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ament_index/resource_index/packages\n'}
+[2.922872] (ardu_afra_team) StdoutLine: {'line': b'symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/package.xml -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team\n'}
+[2.923269] (ardu_afra_team) StdoutLine: {'line': b'symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/launch/spawn_drones.launch.py -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/launch\n'}
+[2.923679] (ardu_afra_team) StdoutLine: {'line': b'symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/models/iris_with_ardupilot/model.sdf -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot\n'}
+[2.923975] (ardu_afra_team) StdoutLine: {'line': b'symbolically linking /home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team/models/iris_with_ardupilot/model.config -> /home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/share/ardu_afra_team/models/iris_with_ardupilot\n'}
+[2.948516] (px4_ros_com) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.948921] (px4_ros_com) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.987355] (ardu_afra_team) CommandEnded: {'returncode': 0}
+[3.005164] (-) TimerEvent: {}
+[3.011036] (ardu_afra_team) JobEnded: {'identifier': 'ardu_afra_team', 'rc': 0}
+[3.067917] (px4_ros_com) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.071861] (px4_ros_com) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.105383] (-) TimerEvent: {}
+[3.206082] (-) TimerEvent: {}
+[3.306618] (-) TimerEvent: {}
+[3.357645] (px4_ros_com) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[3.406740] (-) TimerEvent: {}
+[3.423246] (px4_ros_com) StdoutLine: {'line': b'-- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[3.458108] (px4_ros_com) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.506831] (-) TimerEvent: {}
+[3.607230] (-) TimerEvent: {}
+[3.707807] (-) TimerEvent: {}
+[3.777795] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.795392] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.797083] (px4_ros_com) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/amin/ros2_ardu_afra_team_ws/src/px4_ros_com/include;$<BUILD_INTERFACE:/home/amin/ros2_ardu_afra_team_ws/src/px4_ros_com/include/px4_ros_com>\n'}
+[3.797406] (px4_ros_com) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.807989] (-) TimerEvent: {}
+[3.811117] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.811477] (px4_ros_com) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.817753] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.823504] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.826916] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.839272] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.839799] (px4_ros_com) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.845194] (px4_ros_com) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.853063] (px4_ros_com) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.903058] (px4_ros_com) StdoutLine: {'line': b'-- Generating done\n'}
+[3.908068] (-) TimerEvent: {}
+[3.916952] (px4_ros_com) StdoutLine: {'line': b'-- Build files have been written to: /home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com\n'}
+[3.932755] (px4_ros_com) CommandEnded: {'returncode': 0}
+[3.935108] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'build'}
+[3.939120] (px4_ros_com) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com', '--', '-j8', '-l8'], 'cwd': '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'amin'), ('LC_TIME', 'az_IR'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amin/ros2_ws/install/px4_ros_com/lib:/home/amin/ros2_ws/install/px4_msgs/lib:/home/amin/ros2_ws/install/px4/lib:/home/amin/ros2_ws/install/mavros_extras/lib:/home/amin/ros2_ws/install/mavros/lib:/home/amin/ros2_ws/install/mavros_msgs/lib:/home/amin/ros2_ws/install/libmavconn/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amin'), ('OLDPWD', '/home/amin/ros2_ardu_afra_team_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'az_IR'), ('SYSTEMD_EXEC_PID', '5093'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/amin/ros2_ws/install:/home/amin/ros2_px4_offboard_example_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'amin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/amin/gazebo/models:/home/amin/ardupilot_gazebo/models:/home/amin/ros2_ws/src/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models:/home/amin/ros2_ws/src/models:/home/amin/ros2_ws/src/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/lib/ccache:/home/amin/apm/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/amin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Astro-Amin:@/tmp/.ICE-unix/1664,unix/Astro-Amin:/tmp/.ICE-unix/1664'), ('DONT_RUN', '1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'az_IR'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/39a85f78_552f_4974_8e00_3b3420d7dd37'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'az_IR'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.R4LS52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_ws/install/drone_formation:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'az_IR'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'az_IR'), ('LC_IDENTIFICATION', 'az_IR'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/amin/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/px4_commander_pkg:/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages:/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/drone_formation:/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'az_IR'), ('LC_PAPER', 'az_IR'), ('COLCON', '1'), ('apm', '/home/amin/apm'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/drone_formation:/opt/ros/humble')]), 'shell': False}
+[4.008207] (-) TimerEvent: {}
+[4.029446] (px4_ros_com) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o\x1b[0m\n'}
+[4.034676] (px4_ros_com) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o\x1b[0m\n'}
+[4.035042] (px4_ros_com) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o\x1b[0m\n'}
+[4.035339] (px4_ros_com) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o\x1b[0m\n'}
+[4.035606] (px4_ros_com) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o\x1b[0m\n'}
+[4.039257] (px4_ros_com) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o\x1b[0m\n'}
+[4.051402] (px4_ros_com) StdoutLine: {'line': b'[ 50%] Built target ament_cmake_python_symlink_px4_ros_com\n'}
+[4.108318] (-) TimerEvent: {}
+[4.208719] (-) TimerEvent: {}
+[4.279098] (px4_ros_com) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libframe_transforms.so\x1b[0m\n'}
+[4.308858] (-) TimerEvent: {}
+[4.410713] (-) TimerEvent: {}
+[4.512736] (-) TimerEvent: {}
+[4.613117] (-) TimerEvent: {}
+[4.713476] (-) TimerEvent: {}
+[4.743791] (px4_ros_com) StdoutLine: {'line': b'running egg_info\n'}
+[4.789159] (px4_ros_com) StdoutLine: {'line': b'creating px4_ros_com.egg-info\n'}
+[4.789547] (px4_ros_com) StdoutLine: {'line': b'writing px4_ros_com.egg-info/PKG-INFO\n'}
+[4.790215] (px4_ros_com) StdoutLine: {'line': b'writing dependency_links to px4_ros_com.egg-info/dependency_links.txt\n'}
+[4.790885] (px4_ros_com) StdoutLine: {'line': b'writing top-level names to px4_ros_com.egg-info/top_level.txt\n'}
+[4.791177] (px4_ros_com) StdoutLine: {'line': b"writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'\n"}
+[4.810282] (px4_ros_com) StdoutLine: {'line': b'[ 58%] Built target frame_transforms\n'}
+[4.813565] (-) TimerEvent: {}
+[4.914004] (-) TimerEvent: {}
+[4.970012] (px4_ros_com) StdoutLine: {'line': b"reading manifest file 'px4_ros_com.egg-info/SOURCES.txt'\n"}
+[4.972289] (px4_ros_com) StdoutLine: {'line': b"writing manifest file 'px4_ros_com.egg-info/SOURCES.txt'\n"}
+[5.014144] (-) TimerEvent: {}
+[5.048351] (px4_ros_com) StdoutLine: {'line': b'[ 58%] Built target ament_cmake_python_build_px4_ros_com_egg\n'}
+[5.114281] (-) TimerEvent: {}
+[5.214734] (-) TimerEvent: {}
+[5.315171] (-) TimerEvent: {}
+[5.415821] (-) TimerEvent: {}
+[5.516675] (-) TimerEvent: {}
+[5.617096] (-) TimerEvent: {}
+[5.717526] (-) TimerEvent: {}
+[5.817976] (-) TimerEvent: {}
+[5.918411] (-) TimerEvent: {}
+[6.018858] (-) TimerEvent: {}
+[6.119295] (-) TimerEvent: {}
+[6.219740] (-) TimerEvent: {}
+[6.320188] (-) TimerEvent: {}
+[6.420631] (-) TimerEvent: {}
+[6.521075] (-) TimerEvent: {}
+[6.621512] (-) TimerEvent: {}
+[6.721925] (-) TimerEvent: {}
+[6.822366] (-) TimerEvent: {}
+[6.922818] (-) TimerEvent: {}
+[7.023254] (-) TimerEvent: {}
+[7.123722] (-) TimerEvent: {}
+[7.224159] (-) TimerEvent: {}
+[7.324603] (-) TimerEvent: {}
+[7.425058] (-) TimerEvent: {}
+[7.525509] (-) TimerEvent: {}
+[7.625936] (-) TimerEvent: {}
+[7.726366] (-) TimerEvent: {}
+[7.826787] (-) TimerEvent: {}
+[7.927242] (-) TimerEvent: {}
+[8.027716] (-) TimerEvent: {}
+[8.128149] (-) TimerEvent: {}
+[8.228586] (-) TimerEvent: {}
+[8.329008] (-) TimerEvent: {}
+[8.429430] (-) TimerEvent: {}
+[8.534272] (-) TimerEvent: {}
+[8.634734] (-) TimerEvent: {}
+[8.735170] (-) TimerEvent: {}
+[8.835666] (-) TimerEvent: {}
+[8.936072] (-) TimerEvent: {}
+[9.038020] (-) TimerEvent: {}
+[9.138463] (-) TimerEvent: {}
+[9.238901] (-) TimerEvent: {}
+[9.341744] (-) TimerEvent: {}
+[9.442236] (-) TimerEvent: {}
+[9.542745] (-) TimerEvent: {}
+[9.643191] (-) TimerEvent: {}
+[9.743635] (-) TimerEvent: {}
+[9.844090] (-) TimerEvent: {}
+[9.944745] (-) TimerEvent: {}
+[10.046707] (-) TimerEvent: {}
+[10.148748] (-) TimerEvent: {}
+[10.252750] (-) TimerEvent: {}
+[10.353430] (-) TimerEvent: {}
+[10.453875] (-) TimerEvent: {}
+[10.554296] (-) TimerEvent: {}
+[10.654680] (-) TimerEvent: {}
+[10.755127] (-) TimerEvent: {}
+[10.855726] (-) TimerEvent: {}
+[10.956951] (-) TimerEvent: {}
+[11.057768] (-) TimerEvent: {}
+[11.159727] (-) TimerEvent: {}
+[11.260135] (-) TimerEvent: {}
+[11.360570] (-) TimerEvent: {}
+[11.468435] (-) TimerEvent: {}
+[11.568846] (-) TimerEvent: {}
+[11.669383] (-) TimerEvent: {}
+[11.771737] (-) TimerEvent: {}
+[11.872173] (-) TimerEvent: {}
+[11.972660] (-) TimerEvent: {}
+[12.073129] (-) TimerEvent: {}
+[12.173478] (-) TimerEvent: {}
+[12.273904] (-) TimerEvent: {}
+[12.374300] (-) TimerEvent: {}
+[12.474746] (-) TimerEvent: {}
+[12.575191] (-) TimerEvent: {}
+[12.675556] (-) TimerEvent: {}
+[12.776105] (-) TimerEvent: {}
+[12.876871] (-) TimerEvent: {}
+[12.977704] (-) TimerEvent: {}
+[13.078501] (-) TimerEvent: {}
+[13.179338] (-) TimerEvent: {}
+[13.280164] (-) TimerEvent: {}
+[13.380925] (-) TimerEvent: {}
+[13.481705] (-) TimerEvent: {}
+[13.582327] (-) TimerEvent: {}
+[13.682820] (-) TimerEvent: {}
+[13.783577] (-) TimerEvent: {}
+[13.884385] (-) TimerEvent: {}
+[13.985207] (-) TimerEvent: {}
+[14.085947] (-) TimerEvent: {}
+[14.186712] (-) TimerEvent: {}
+[14.287501] (-) TimerEvent: {}
+[14.388221] (-) TimerEvent: {}
+[14.488808] (-) TimerEvent: {}
+[14.589300] (-) TimerEvent: {}
+[14.689983] (-) TimerEvent: {}
+[14.790404] (-) TimerEvent: {}
+[14.890779] (-) TimerEvent: {}
+[14.991142] (-) TimerEvent: {}
+[15.091507] (-) TimerEvent: {}
+[15.191899] (-) TimerEvent: {}
+[15.292258] (-) TimerEvent: {}
+[15.392620] (-) TimerEvent: {}
+[15.493008] (-) TimerEvent: {}
+[15.593375] (-) TimerEvent: {}
+[15.693748] (-) TimerEvent: {}
+[15.794184] (-) TimerEvent: {}
+[15.894539] (-) TimerEvent: {}
+[15.994953] (-) TimerEvent: {}
+[16.309276] (-) TimerEvent: {}
+[16.409634] (-) TimerEvent: {}
+[16.510007] (-) TimerEvent: {}
+[16.610441] (-) TimerEvent: {}
+[16.710862] (-) TimerEvent: {}
+[16.811300] (-) TimerEvent: {}
+[16.911718] (-) TimerEvent: {}
+[17.012171] (-) TimerEvent: {}
+[17.202270] (-) TimerEvent: {}
+[17.303947] (-) TimerEvent: {}
+[17.404447] (-) TimerEvent: {}
+[17.505767] (-) TimerEvent: {}
+[17.606173] (-) TimerEvent: {}
+[17.706604] (-) TimerEvent: {}
+[17.808750] (-) TimerEvent: {}
+[17.909214] (-) TimerEvent: {}
+[18.009603] (-) TimerEvent: {}
+[18.110032] (-) TimerEvent: {}
+[18.210473] (-) TimerEvent: {}
+[18.310919] (-) TimerEvent: {}
+[18.411352] (-) TimerEvent: {}
+[18.511763] (-) TimerEvent: {}
+[18.612185] (-) TimerEvent: {}
+[18.712565] (-) TimerEvent: {}
+[18.812953] (-) TimerEvent: {}
+[18.913328] (-) TimerEvent: {}
+[19.013689] (-) TimerEvent: {}
+[19.114029] (-) TimerEvent: {}
+[19.214399] (-) TimerEvent: {}
+[19.314750] (-) TimerEvent: {}
+[19.415109] (-) TimerEvent: {}
+[19.515461] (-) TimerEvent: {}
+[19.615830] (-) TimerEvent: {}
+[19.716183] (-) TimerEvent: {}
+[19.816537] (-) TimerEvent: {}
+[19.916899] (-) TimerEvent: {}
+[20.017235] (-) TimerEvent: {}
+[20.117583] (-) TimerEvent: {}
+[20.217940] (-) TimerEvent: {}
+[20.318281] (-) TimerEvent: {}
+[20.418622] (-) TimerEvent: {}
+[20.519073] (-) TimerEvent: {}
+[20.620012] (-) TimerEvent: {}
+[20.720808] (-) TimerEvent: {}
+[20.821467] (-) TimerEvent: {}
+[20.922208] (-) TimerEvent: {}
+[21.022793] (-) TimerEvent: {}
+[21.123370] (-) TimerEvent: {}
+[21.223769] (-) TimerEvent: {}
+[21.324120] (-) TimerEvent: {}
+[21.424472] (-) TimerEvent: {}
+[21.524893] (-) TimerEvent: {}
+[21.625271] (-) TimerEvent: {}
+[21.725663] (-) TimerEvent: {}
+[21.826002] (-) TimerEvent: {}
+[21.926435] (-) TimerEvent: {}
+[22.026789] (-) TimerEvent: {}
+[22.127164] (-) TimerEvent: {}
+[22.227578] (-) TimerEvent: {}
+[24.850291] (-) TimerEvent: {}
+[24.950665] (-) TimerEvent: {}
+[25.051032] (-) TimerEvent: {}
+[25.151383] (-) TimerEvent: {}
+[25.251755] (-) TimerEvent: {}
+[25.352181] (-) TimerEvent: {}
+[25.452844] (-) TimerEvent: {}
+[25.553564] (-) TimerEvent: {}
+[25.653964] (-) TimerEvent: {}
+[26.124463] (-) TimerEvent: {}
+[26.386310] (-) TimerEvent: {}
+[26.486693] (-) TimerEvent: {}
+[26.587060] (-) TimerEvent: {}
+[26.687412] (-) TimerEvent: {}
+[26.787751] (-) TimerEvent: {}
+[26.888170] (-) TimerEvent: {}
+[26.988558] (-) TimerEvent: {}
+[27.089148] (-) TimerEvent: {}
+[27.179279] (px4_ros_com) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable debug_vect_advertiser\x1b[0m\n'}
+[27.191138] (-) TimerEvent: {}
+[27.196708] (px4_ros_com) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable offboard_control_srv\x1b[0m\n'}
+[27.197080] (px4_ros_com) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable offboard_control\x1b[0m\n'}
+[27.204593] (px4_ros_com) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable sensor_combined_listener\x1b[0m\n'}
+[27.291819] (-) TimerEvent: {}
+[27.393811] (-) TimerEvent: {}
+[27.494461] (-) TimerEvent: {}
+[27.595116] (-) TimerEvent: {}
+[27.609589] (px4_ros_com) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable vehicle_gps_position_listener\x1b[0m\n'}
+[27.695240] (-) TimerEvent: {}
+[27.760393] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target debug_vect_advertiser\n'}
+[27.795427] (-) TimerEvent: {}
+[27.858759] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target offboard_control\n'}
+[27.895557] (-) TimerEvent: {}
+[27.934350] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target offboard_control_srv\n'}
+[27.995696] (-) TimerEvent: {}
+[28.096090] (-) TimerEvent: {}
+[28.169895] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target sensor_combined_listener\n'}
+[28.196219] (-) TimerEvent: {}
+[28.271258] (px4_ros_com) StdoutLine: {'line': b'[100%] Built target vehicle_gps_position_listener\n'}
+[28.287117] (px4_ros_com) CommandEnded: {'returncode': 0}
+[28.288085] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'install'}
+[28.296342] (-) TimerEvent: {}
+[28.300959] (px4_ros_com) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com'], 'cwd': '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'amin'), ('LC_TIME', 'az_IR'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/amin/ros2_ws/install/px4_ros_com/lib:/home/amin/ros2_ws/install/px4_msgs/lib:/home/amin/ros2_ws/install/px4/lib:/home/amin/ros2_ws/install/mavros_extras/lib:/home/amin/ros2_ws/install/mavros/lib:/home/amin/ros2_ws/install/mavros_msgs/lib:/home/amin/ros2_ws/install/libmavconn/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/amin'), ('OLDPWD', '/home/amin/ros2_ardu_afra_team_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'az_IR'), ('SYSTEMD_EXEC_PID', '5093'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/amin/ros2_ws/install:/home/amin/ros2_px4_offboard_example_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'amin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/amin/gazebo/models:/home/amin/ardupilot_gazebo/models:/home/amin/ros2_ws/src/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models:/home/amin/ros2_ws/src/models:/home/amin/ros2_ws/src/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/lib/ccache:/home/amin/apm/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/amin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/Astro-Amin:@/tmp/.ICE-unix/1664,unix/Astro-Amin:/tmp/.ICE-unix/1664'), ('DONT_RUN', '1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'az_IR'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/39a85f78_552f_4974_8e00_3b3420d7dd37'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'az_IR'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.R4LS52'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_ws/install/drone_formation:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'az_IR'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'az_IR'), ('LC_IDENTIFICATION', 'az_IR'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/amin/ros2_ardu_afra_team_ws/build/px4_ros_com'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/amin/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/px4_commander_pkg:/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages:/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages:/home/amin/ros2_ws/build/drone_formation:/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'az_IR'), ('LC_PAPER', 'az_IR'), ('COLCON', '1'), ('apm', '/home/amin/apm'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/amin/ros2_ws/install/px4_ros_com:/home/amin/ros2_ws/install/px4_msgs:/home/amin/ros2_ws/install/px4:/home/amin/ros2_ws/install/mavros_extras:/home/amin/ros2_ws/install/mavros:/home/amin/ros2_ws/install/mavros_msgs:/home/amin/ros2_ws/install/libmavconn:/home/amin/ros2_px4_offboard_example_ws/install/my_example_pkg:/home/amin/ros2_ws/install/px4_commander_pkg:/home/amin/ros2_ws/install/drone_formation:/opt/ros/humble')]), 'shell': False}
+[28.311632] (px4_ros_com) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.312507] (px4_ros_com) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[28.313187] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener\n'}
+[28.326005] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener\n'}
+[28.338928] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser\n'}
+[28.351390] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control\n'}
+[28.363833] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control_srv\n'}
+[28.379290] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh\n'}
+[28.392407] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv\n'}
+[28.396491] (-) TimerEvent: {}
+[28.405752] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h\n'}
+[28.418848] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml\n'}
+[28.436808] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py\n'}
+[28.449252] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py\n'}
+[28.461078] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py\n'}
+[28.472896] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py\n'}
+[28.484708] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py\n'}
+[28.496631] (-) TimerEvent: {}
+[28.497200] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.sh\n'}
+[28.509783] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/pythonpath.dsv\n'}
+[28.522587] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[28.537850] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[28.549759] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[28.561966] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[28.574506] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py\n'}
+[28.586466] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py\n'}
+[28.596757] (-) TimerEvent: {}
+[28.598530] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control.py\n'}
+[28.610961] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com\n'}
+[28.623223] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com\n'}
+[28.636239] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh\n'}
+[28.648351] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv\n'}
+[28.660996] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh\n'}
+[28.675980] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv\n'}
+[28.690549] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash\n'}
+[28.696871] (-) TimerEvent: {}
+[28.705197] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh\n'}
+[28.719611] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh\n'}
+[28.733897] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv\n'}
+[28.746764] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/package.dsv\n'}
+[28.797162] (-) TimerEvent: {}
+[28.897905] (-) TimerEvent: {}
+[28.918430] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com\n'}
+[28.933572] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[28.947942] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[28.962640] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[28.977599] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[28.991750] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake\n'}
+[28.998002] (-) TimerEvent: {}
+[29.004586] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake\n'}
+[29.017198] (px4_ros_com) StdoutLine: {'line': b'-- Symlinking: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/package.xml\n'}
+[29.029864] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/libframe_transforms.so\n'}
+[29.035742] (px4_ros_com) StdoutLine: {'line': b'-- Set runtime path of "/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/lib/libframe_transforms.so" to ""\n'}
+[29.096090] (px4_ros_com) StdoutLine: {'line': b"Listing '/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com'...\n"}
+[29.096521] (px4_ros_com) StdoutLine: {'line': b"Compiling '/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/__init__.py'...\n"}
+[29.096639] (px4_ros_com) StdoutLine: {'line': b"Compiling '/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages/px4_ros_com/module_to_import.py'...\n"}
+[29.098093] (-) TimerEvent: {}
+[29.102339] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake\n'}
+[29.102607] (px4_ros_com) StdoutLine: {'line': b'-- Installing: /home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake\n'}
+[29.105016] (px4_ros_com) CommandEnded: {'returncode': 0}
+[29.134028] (px4_ros_com) JobEnded: {'identifier': 'px4_ros_com', 'rc': 0}
+[29.134915] (-) EventReactorShutdown: {}
