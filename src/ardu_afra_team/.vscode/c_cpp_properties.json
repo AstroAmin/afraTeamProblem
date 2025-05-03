@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/include/**",
+        "/home/amin/ros2_ws/install/px4_ros_com/include/**",
+        "/home/amin/ros2_ws/install/px4_msgs/include/**",
+        "/home/amin/ros2_ws/install/px4/include/**",
+        "/home/amin/ros2_ws/install/mavros_extras/include/**",
+        "/home/amin/ros2_ws/install/mavros/include/**",
+        "/home/amin/ros2_ws/install/mavros_msgs/include/**",
+        "/home/amin/ros2_ws/install/libmavconn/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/amin/ros2_ardu_afra_team_ws/src/px4_ros_com/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

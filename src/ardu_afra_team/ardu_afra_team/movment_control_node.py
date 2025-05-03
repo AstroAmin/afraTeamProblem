@@ -1,36 +1,29 @@
 import time
-import math
-import os
+import random
 import threading
 
-# تعریف کلاس درون
 class Drone:
-    def __init__(self, drone_id, x=0, y=0, z=5.0):  # ارتفاع پیش‌فرض ۵ متر
+    def __init__(self, drone_id, x=0, y=0, z=0):
         self.id = drone_id
         self.x = x
         self.y = y
         self.z = z
         self.active = True
-        self.leader = False  # فیلد برای نشان دادن لیدر بودن
 
     def move_towards(self, target_x, target_y, target_z, step_size):
         if not self.active:
             return
-        # محاسبه تغییرات در هر سه محور X, Y, Z
         dx = target_x - self.x
         dy = target_y - self.y
         dz = target_z - self.z
-        distance = math.sqrt(dx**2 + dy**2 + dz**2)
+        distance = (dx**2 + dy**2 + dz**2) ** 0.5
         if distance == 0:
             return
-        # حرکت در سه بعد (X, Y, Z)
         self.x += step_size * dx / distance
         self.y += step_size * dy / distance
-        self.z += step_size * dz / distance  # تغییرات در محور Z هم اعمال میشه
+        self.z += step_size * dz / distance
 
-# نمایش مختصات به‌روز شده در هر گام
 def print_drones(drones):
-    os.system('cls' if os.name == 'nt' else 'clear')  # پاک کردن صفحه
     print("+-------+---------+---------+---------+")
     print("| ID    |   X(m)  |   Y(m)  |   Z(m)  |")
     print("+-------+---------+---------+---------+")
@@ -41,85 +34,111 @@ def print_drones(drones):
             print(f"|  {drone.id:^5} |   ❌    |   ❌    |   ❌    |")
     print("+-------+---------+---------+---------+")
 
-# تابع برای حرکت درون‌ها
-def move_drones(drones, target_point, speed):
-    step_time = 0.5  # زمان گام
-    step_size = speed * step_time  # گام حرکت در هر فریم
+def go_to_altitude(drones, target_z, step_size):
+    all_reached = False
+    while not all_reached:
+        all_reached = True
+        for drone in drones:
+            if drone.active and abs(drone.z - target_z) > 0.1:
+                drone.move_towards(drone.x, drone.y, target_z, step_size)
+                all_reached = False
+        print_drones(drones)
+        time.sleep(0.5)
+
+def form_arrow_formation(drones, spacing):
+    # موقعیت پیکانی در سطح Z=2
+    drones[0].x, drones[0].y, drones[0].z = 0, 0, 2
+    drones[1].x, drones[1].y, drones[1].z = -spacing, -spacing, 2
+    drones[2].x, drones[2].y, drones[2].z = 0, -spacing, 2
+    drones[3].x, drones[3].y, drones[3].z = spacing, -spacing, 2
+
+def select_new_leader(drones):
+    active_drones = [d for d in drones if d.active]
+    if active_drones:
+        new_leader = random.choice(active_drones)
+        print(f"\n>>> لیدر جدید: درون {new_leader.id}\n")
+        return new_leader
+    else:
+        print("هیچ درون فعالی باقی نمانده است.")
+        return None
+
+command = "none"
+def command_listener():
+    global command
     while True:
+        cmd = input("دستور اضطراری؟ (d = حذف لیدر / q = خروج / s = توقف): ").strip().lower()
+        if cmd in ['d', 'q', 's']:
+            command = cmd
+
+def move_drones(drones, target_point, speed):
+    global command
+    step_time = 0.5
+    step_size = speed * step_time
+
+    while True:
+        print_drones(drones)
+
         all_reached = True
         for drone in drones:
             if drone.active:
-                # اگر درون لیدر باشد، به سمت هدف حرکت می‌کند
-                if drone.leader:
-                    dist = ((drone.x - target_point[0])**2 + (drone.y - target_point[1])**2 + (drone.z - target_point[2])**2) ** 0.5
-                    if dist > 0.5:  # حداقل فاصله که نشان‌دهنده رسیدن به نقطه است
-                        drone.move_towards(*target_point, step_size)
-                        all_reached = False
-                # اگر درون فالوئر باشد، به سمت لیدر حرکت می‌کند
-                else:
-                    leader = next(d for d in drones if d.leader)
-                    dist_to_leader = ((drone.x - leader.x)**2 + (drone.y - leader.y)**2 + (drone.z - leader.z)**2) ** 0.5
-                    if dist_to_leader > 0.5:  # فاصله از لیدر
-                        drone.move_towards(leader.x, leader.y, leader.z, step_size)
-                        all_reached = False
+                dist = ((drone.x - target_point[0])**2 + (drone.y - target_point[1])**2 + (drone.z - target_point[2])**2) ** 0.5
+                if dist > 0.5:
+                    drone.move_towards(*target_point, step_size)
+                    all_reached = False
 
-        # نمایش مختصات جدید در هر گام
-        print_drones(drones)
+        # بررسی دستور
+        if command == 'd':
+            drones[0].active = False
+            new_leader = select_new_leader(drones)
+            if new_leader:
+                drones.remove(new_leader)
+                drones.insert(0, new_leader)
+            command = "none"
 
-        time.sleep(step_time)
+        elif command == 'q':
+            print("برنامه متوقف شد.")
+            exit()
+
+        elif command == 's':
+            input("درون‌ها متوقف شدند. برای ادامه Enter را بزنید.")
+            command = "none"
 
         if all_reached:
             break
 
-# تابع برای گرفتن دستور از کاربر (فقط بعد از شروع حرکت)
-def command_listener(drones):
-    while True:
-        command = input("دستور؟ (Enter برای ادامه / d برای حذف لیدر / q برای خروج): ")
-        if command == 'd':
-            print("لیدر حذف شد.")
-            # حذف لیدر از لیست درون‌ها
-            leader = next(d for d in drones if d.leader)
-            leader.active = False  # حذف لیدر
-            print(f"لیدر {leader.id} حذف شد.")
-        elif command == 'q':
-            print("خروج از برنامه.")
-            exit()
+        time.sleep(step_time)
 
-# تابع اصلی
 def main():
-    # دریافت ورودی‌ها از کاربر
+    global command
+
     num_drones = 4
     speed = float(input("سرعت حرکت درون‌ها (متر بر ثانیه): "))
     spacing = float(input("فاصله بین درون‌ها (متر): "))
 
-    point2 = list(map(float, input("مختصات نقطه دوم (X Y Z): ").split()))
-    point3 = list(map(float, input("مختصات نقطه سوم (X Y Z): ").split()))
+    print("مختصات نقطه دوم (X Y Z): ")
+    point2 = list(map(float, input().split()))
 
-    drones = [Drone(drone_id=i+1) for i in range(num_drones)]
+    print("مختصات نقطه سوم (X Y Z): ")
+    point3 = list(map(float, input().split()))
 
-    # استفاده از Z نقطه دوم به‌جای ارتفاع جداگانه
-    for i, drone in enumerate(drones):
-        drone.x = i * spacing
-        drone.y = 0
-        drone.z = point2[2]  # مقدار اولیه ارتفاع
+    drones = [Drone(drone_id=i+1, x=random.uniform(-5, 5), y=random.uniform(-5, 5), z=0) for i in range(num_drones)]
 
-    # انتخاب لیدر (در اینجا اولین درون به‌عنوان لیدر انتخاب می‌شود)
-    drones[0].leader = True
+    print("\nدرون‌ها از مکان تصادفی شروع می‌کنند. ابتدا رفتن به ارتفاع ۲ متر...\n")
+    step_size = speed * 0.5
+    go_to_altitude(drones, 2, step_size)
 
-    print("آرایش اولیه شکل گرفت:\n")
+    print("\nدر حال شکل‌گیری آرایش پیکانی...\n")
+    form_arrow_formation(drones, spacing)
     print_drones(drones)
 
-    # شروع حرکت درون‌ها
+    threading.Thread(target=command_listener, daemon=True).start()
+    time.sleep(2)
+
     print("\nحرکت به سمت نقطه دوم...\n")
     move_drones(drones, point2, speed)
 
     print("\nحرکت به سمت نقطه سوم...\n")
     move_drones(drones, point3, speed)
-
-    # پس از شروع حرکت درون‌ها، درخواست دستور از کاربر
-    command_thread = threading.Thread(target=command_listener, args=(drones,))
-    command_thread.daemon = True
-    command_thread.start()
 
 if __name__ == "__main__":
     main()

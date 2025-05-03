@@ -1,0 +1,32 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team",
+        "/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages",
+        "/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/build/px4_commander_pkg",
+        "/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages",
+        "/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/build/drone_formation",
+        "/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/amin/ros2_ardu_afra_team_ws/install/px4_ros_com/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ardu_afra_team_ws/build/ardu_afra_team",
+        "/home/amin/ros2_ardu_afra_team_ws/install/ardu_afra_team/lib/python3.10/site-packages",
+        "/home/amin/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/build/px4_commander_pkg",
+        "/home/amin/ros2_ws/install/px4_commander_pkg/lib/python3.10/site-packages",
+        "/home/amin/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/install/mavros/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/install/mavros_msgs/local/lib/python3.10/dist-packages",
+        "/home/amin/ros2_ws/build/drone_formation",
+        "/home/amin/ros2_ws/install/drone_formation/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
