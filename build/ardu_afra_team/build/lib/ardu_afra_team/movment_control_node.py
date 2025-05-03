@@ -1,36 +1,29 @@
 import time
-import math
-import os
+import random
 import threading
 
-# تعریف کلاس درون
 class Drone:
-    def __init__(self, drone_id, x=0, y=0, z=5.0):  # ارتفاع پیش‌فرض ۵ متر
+    def __init__(self, drone_id, x=0, y=0, z=0):
         self.id = drone_id
         self.x = x
         self.y = y
         self.z = z
         self.active = True
-        self.leader = False  # فیلد برای نشان دادن لیدر بودن
 
     def move_towards(self, target_x, target_y, target_z, step_size):
         if not self.active:
             return
-        # محاسبه تغییرات در هر سه محور X, Y, Z
         dx = target_x - self.x
         dy = target_y - self.y
         dz = target_z - self.z
-        distance = math.sqrt(dx**2 + dy**2 + dz**2)
+        distance = (dx**2 + dy**2 + dz**2) ** 0.5
         if distance == 0:
             return
-        # حرکت در سه بعد (X, Y, Z)
         self.x += step_size * dx / distance
         self.y += step_size * dy / distance
-        self.z += step_size * dz / distance  # تغییرات در محور Z هم اعمال میشه
+        self.z += step_size * dz / distance
 
-# نمایش مختصات به‌روز شده در هر گام
 def print_drones(drones):
-    os.system('cls' if os.name == 'nt' else 'clear')  # پاک کردن صفحه
     print("+-------+---------+---------+---------+")
     print("| ID    |   X(m)  |   Y(m)  |   Z(m)  |")
     print("+-------+---------+---------+---------+")
@@ -38,88 +31,154 @@ def print_drones(drones):
         if drone.active:
             print(f"|  {drone.id:^5} | {drone.x:>7.2f} | {drone.y:>7.2f} | {drone.z:>7.2f} |")
         else:
-            print(f"|  {drone.id:^5} |   ❌    |   ❌    |   ❌    |")
+            print(f"|  {drone.id:^5} |   🚫    |   🚫    |   🚫    |")
     print("+-------+---------+---------+---------+")
 
-# تابع برای حرکت درون‌ها
-def move_drones(drones, target_point, speed):
-    step_time = 0.5  # زمان گام
-    step_size = speed * step_time  # گام حرکت در هر فریم
+def form_initial_formation(drones, formation_center_x, formation_center_y, formation_center_z, spacing):
+    leader = drones[0]
+    leader.x = formation_center_x
+    leader.y = formation_center_y
+    leader.z = formation_center_z
+    drones[1].x = formation_center_x - spacing
+    drones[1].y = formation_center_y - spacing
+    drones[1].z = formation_center_z
+    drones[2].x = formation_center_x
+    drones[2].y = formation_center_y - spacing
+    drones[2].z = formation_center_z
+    drones[3].x = formation_center_x + spacing
+    drones[3].y = formation_center_y - spacing
+    drones[3].z = formation_center_z
+
+def select_new_leader(drones):
+    active_drones = [d for d in drones if d.active]
+    if active_drones:
+        new_leader = random.choice(active_drones)
+        print(f"\n>>> New Leader: Drone {new_leader.id} 🚀\n")
+        return new_leader
+    else:
+        print("No active drones left.")
+        return None
+
+# Shared variable for emergency command
+command = "none"
+
+def command_listener():
+    global command
     while True:
+        cmd = input("Emergency command? (d = remove leader / q = quit / s = stop): ").strip().lower()
+        if cmd in ['d', 'q', 's']:
+            command = cmd
+
+def move_drones(drones, target_point, speed):
+    global command
+    step_time = 0.5
+    step_size = speed * step_time
+
+    while True:
+        print_drones(drones)
+
         all_reached = True
         for drone in drones:
             if drone.active:
-                # اگر درون لیدر باشد، به سمت هدف حرکت می‌کند
-                if drone.leader:
-                    dist = ((drone.x - target_point[0])**2 + (drone.y - target_point[1])**2 + (drone.z - target_point[2])**2) ** 0.5
-                    if dist > 0.5:  # حداقل فاصله که نشان‌دهنده رسیدن به نقطه است
-                        drone.move_towards(*target_point, step_size)
-                        all_reached = False
-                # اگر درون فالوئر باشد، به سمت لیدر حرکت می‌کند
-                else:
-                    leader = next(d for d in drones if d.leader)
-                    dist_to_leader = ((drone.x - leader.x)**2 + (drone.y - leader.y)**2 + (drone.z - leader.z)**2) ** 0.5
-                    if dist_to_leader > 0.5:  # فاصله از لیدر
-                        drone.move_towards(leader.x, leader.y, leader.z, step_size)
-                        all_reached = False
+                dist = ((drone.x - target_point[0])**2 + (drone.y - target_point[1])**2 + (drone.z - target_point[2])**2) ** 0.5
+                if dist > 0.5:
+                    drone.move_towards(*target_point, step_size)
+                    all_reached = False
 
-        # نمایش مختصات جدید در هر گام
-        print_drones(drones)
+        # Check command
+        if command == 'd':
+            drones[0].active = False
+            new_leader = select_new_leader(drones)
+            if new_leader:
+                drones.remove(new_leader)
+                drones.insert(0, new_leader)
+            command = "none"
 
-        time.sleep(step_time)
+        elif command == 'q':
+            print("Program terminated. 🚨")
+            exit()
+
+        elif command == 's':
+            print("\nDrone movement stopped. 🛑")
+            continue_move = input("Do you want to continue the movement? (yes/no): ").strip().lower()
+            if continue_move == 'yes':
+                new_coordinates = input("Enter the new coordinates (X Y Z): ").strip()
+                try:
+                    new_x, new_y, new_z = map(float, new_coordinates.split())
+                    target_point = (new_x, new_y, new_z)
+                except ValueError:
+                    print("Invalid coordinates! Please try again. 🚫")
+                    continue
+            else:
+                print("Movement stopped. 🛑")
+                command = "none"
+                continue
 
         if all_reached:
             break
 
-# تابع برای گرفتن دستور از کاربر (فقط بعد از شروع حرکت)
-def command_listener(drones):
+        time.sleep(step_time)
+
+# Function to validate input coordinates
+def get_valid_coordinates(prompt):
     while True:
-        command = input("دستور؟ (Enter برای ادامه / d برای حذف لیدر / q برای خروج): ")
-        if command == 'd':
-            print("لیدر حذف شد.")
-            # حذف لیدر از لیست درون‌ها
-            leader = next(d for d in drones if d.leader)
-            leader.active = False  # حذف لیدر
-            print(f"لیدر {leader.id} حذف شد.")
-        elif command == 'q':
-            print("خروج از برنامه.")
-            exit()
+        try:
+            coords = input(prompt)
+            x, y, z = map(float, coords.split())
+            if x < 0 or y < 0 or z < 0:  # Check if coordinates are negative
+                print("Coordinates cannot be negative. Please try again. 🚫")
+            else:
+                return x, y, z
+        except ValueError:
+            print("Invalid input. Please enter three numbers (X Y Z). 🔴")
 
-# تابع اصلی
+# Function to validate numerical input
+def get_valid_float(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            if value <= 0:  # Check if the number is non-positive
+                print("The number must be greater than zero. Please try again. 🚫")
+            else:
+                return value
+        except ValueError:
+            print("Invalid input. Please enter a valid number. 🔴")
+
 def main():
-    # دریافت ورودی‌ها از کاربر
-    num_drones = 4
-    speed = float(input("سرعت حرکت درون‌ها (متر بر ثانیه): "))
-    spacing = float(input("فاصله بین درون‌ها (متر): "))
+    global command
 
-    point2 = list(map(float, input("مختصات نقطه دوم (X Y Z): ").split()))
-    point3 = list(map(float, input("مختصات نقطه سوم (X Y Z): ").split()))
+    # Get valid input for speed and spacing
+    speed = get_valid_float("Enter the speed of the drones (meters per second): 🚁 ")
+    spacing = get_valid_float("Enter the spacing between drones (meters): 📏 ")
 
-    drones = [Drone(drone_id=i+1) for i in range(num_drones)]
+    # Get coordinates for the second target point with input validation
+    print("Enter the coordinates for the second point (X Y Z): 🛸 ")
+    point2 = get_valid_coordinates("Coordinates for second point (X Y Z): 🚀 ")
 
-    # استفاده از Z نقطه دوم به‌جای ارتفاع جداگانه
-    for i, drone in enumerate(drones):
-        drone.x = i * spacing
-        drone.y = 0
-        drone.z = point2[2]  # مقدار اولیه ارتفاع
+    # Get coordinates for the third target point with input validation
+    print("Enter the coordinates for the third point (X Y Z): 🛸 ")
+    point3 = get_valid_coordinates("Coordinates for third point (X Y Z): 🚀 ")
 
-    # انتخاب لیدر (در اینجا اولین درون به‌عنوان لیدر انتخاب می‌شود)
-    drones[0].leader = True
+    # Initial formation setup using Z from point2
+    formation_z = point2[2]
 
-    print("آرایش اولیه شکل گرفت:\n")
+    # Create drones
+    drones = [Drone(drone_id=i+1) for i in range(4)]
+
+    form_initial_formation(drones, 0, 0, formation_z, spacing)
+    print("\nInitial formation set up 🚁:\n")
     print_drones(drones)
 
-    # شروع حرکت درون‌ها
-    print("\nحرکت به سمت نقطه دوم...\n")
+    # Start command listener thread
+    threading.Thread(target=command_listener, daemon=True).start()
+
+    time.sleep(2)
+
+    print("\nMoving towards second point... 🛸\n")
     move_drones(drones, point2, speed)
 
-    print("\nحرکت به سمت نقطه سوم...\n")
+    print("\nMoving towards third point... 🚀\n")
     move_drones(drones, point3, speed)
-
-    # پس از شروع حرکت درون‌ها، درخواست دستور از کاربر
-    command_thread = threading.Thread(target=command_listener, args=(drones,))
-    command_thread.daemon = True
-    command_thread.start()
 
 if __name__ == "__main__":
     main()

@@ -1,1 +1,0 @@
-/home/amin/ros2_ardu_afra_team_ws/src/ardu_afra_team/setup.py
